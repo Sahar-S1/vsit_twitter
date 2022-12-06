@@ -16,5 +16,11 @@ public class Driver {
 
         t2.setContent("Hello World");
         System.out.println(t2);
+
+        Wall wall = new Wall();
+        for(int i = 0; i < 10; i++) {
+            wall.addTweet(new Tweet());
+        }
+        wall.display();
     }
 }
