@@ -23,6 +23,11 @@ public class Driver {
         }
         wall.addTweet(myfirsttweet);
         wall.addTweet(t2);
+
+        wall.addComment(new Comment(901, "u", "Nice", 101));
+        wall.addComment(new Comment(902, "s", "Awesome", 102));
+        wall.addComment(new Comment(903, "s", ":)", 101));
+
         wall.display();
     }
 }
