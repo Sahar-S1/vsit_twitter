@@ -60,6 +60,7 @@ public class Tweet {
     public void showComments() {
         for(Comment comment: comments) {
             System.out.println("\t" + comment);
+            comment.showComments();
         }
     }
 
