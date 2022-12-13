@@ -7,18 +7,12 @@ public class Comment {
     private String user;
     private String content;
     private Date timestamp;
-    private int pid;
 
-    public Comment(int id, String user, String content, int pid) {
+    public Comment(int id, String user, String content) {
         this.id = id;
         this.user = user;
         this.content = content;
         this.timestamp = new Date();
-        this.pid = pid;
-    }
-
-    public int getPid() {
-        return pid;
     }
 
     @Override
@@ -28,7 +22,6 @@ public class Comment {
                 ", user='" + user + '\'' +
                 ", content='" + content + '\'' +
                 ", timestamp=" + timestamp +
-                ", pid=" + pid +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 package edu.vsit.twitter;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Tweet {
@@ -8,6 +9,7 @@ public class Tweet {
     private String user;
     private String content;
     private Date timestamp;
+    private ArrayList<Comment> comments;
 
     // Default Constructor
     public Tweet(int id) {
@@ -16,6 +18,7 @@ public class Tweet {
         this.user = "<Anonymous>";
         this.content = "...";
         this.timestamp = new Date();
+        this.comments = new ArrayList<Comment>();
     }
 
     // Getter Setter Methods
@@ -48,6 +51,16 @@ public class Tweet {
 
     private void updateTimestamp() {
         this.timestamp = new Date();
+    }
+
+    public void addComment(Comment comment) {
+        this.comments.add(comment);
+    }
+
+    public void showComments() {
+        for(Comment comment: comments) {
+            System.out.println("\t" + comment);
+        }
     }
 
     // toString()
