@@ -10,9 +10,9 @@ public class Tweet {
     private Date timestamp;
 
     // Default Constructor
-    public Tweet() {
+    public Tweet(int id) {
         System.out.println("Tweet() called");
-        this.id = 0;
+        this.id = id;
         this.user = "<Anonymous>";
         this.content = "...";
         this.timestamp = new Date();

@@ -1,27 +1,31 @@
 package edu.vsit.twitter;
 
+import java.util.ArrayList;
+
 public class Wall {
-    private Tweet [] tweets;
-    private int idx;
+    private ArrayList<Tweet> tweets;
 
     public Wall() {
         System.out.println("Wall() called");
-        tweets = new Tweet[100];
-        idx = 0;
+        tweets = new ArrayList<Tweet>();
     }
 
     public void addTweet(Tweet t) {
-        if(idx < 100) {
-            tweets[idx] = t;
-            idx++;
+        tweets.add(t);
+    }
+
+    public void deleteTweet(int id) {
+        for(Tweet t: tweets) {
+            if(t.getId() == id) {
+                tweets.remove(t);
+                break;
+            }
         }
     }
 
     public void display() {
         for(Tweet t: tweets) {
-            if(t != null) {
-                System.out.println(t);
-            }
+            System.out.println(t);
         }
     }
 }
